@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@200;400;600&display=swap");
+
+body {
+  background-color: hsl(212, 45%, 89%);
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-template-columns: minmax(10px, 330px) [right-side] 1fr [left-side] minmax(
+      10px,
+      330px
+    );
+  grid-template-rows: minmax(4.7em, 5.5em) [top-space] 1fr [ bottom-space] minmax(
+      1.7em,
+      1.5em
+    );
+}
+
+.card {
+    border-radius: 30px;
+  max-width: 1440px;
+  background-color: hsl(0, 0%, 100%);
+  grid-row: top-space/bottom-space;
+  grid-column: right-side/left-side;
+  display: grid;
+  grid-template-columns: [card-border-s] 40px [ img-border-s ] 1fr [img-border-e] 40px [card-border-e];
+  grid-template-rows: [card-border-t] 40px [img-border-s] 1fr [img-border-e p-start-t] 200px [p-end-b] 40px [card-border-b];
+}
+
+.card-qr-image {
+    
+  grid-column: img-border-s/img-border-e;
+  grid-row: img-border-s/img-border-e;
+}
+
+.card-qr-image img {
+  border-radius: 20px;
+}
+
+.card-description {
+  display: block;
+  grid-row: p-start-t/p-end-b;
+  grid-column: img-border-s/img-border-e;
+  padding: 40px;
+  /* font-family: "Outfit", sans-serif; */
+}
+
+.card-description h3{
+    font-family: "Outfit", sans-serif;
+
+}
+
+.card-description p{
+    color: hsl(220, 15%, 55%);
+    display: table;
+}
