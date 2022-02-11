@@ -2,56 +2,67 @@
 
 body {
   background-color: hsl(212, 45%, 89%);
-  padding: 0;
+  padding: 60px;
   margin: 0;
   font-family: "Outfit", sans-serif;
   font-family: "Poppins", sans-serif;
-  display: grid;
-  grid-template-columns: minmax(10px, 330px) [right-side] 1fr [left-side] minmax(
+
+/*  IF YOU CAN FIGURE OUT HOW THIS WORKS  I WOULD BE OF GRATITUDE */
+  /* display: grid;
+  grid-template-columns: minmax(10px, auto) [right-side] 1fr [left-side] minmax(
       10px,
-      330px
+      auto
     );
   grid-template-rows: minmax(4.7em, 5.5em) [top-space] 1fr [ bottom-space] minmax(
       1.7em,
       1.5em
-    );
+    ); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
-    border-radius: 30px;
-  max-width: 1440px;
+  border-radius: 3%;
+  max-width: 376px;
   background-color: hsl(0, 0%, 100%);
   grid-row: top-space/bottom-space;
   grid-column: right-side/left-side;
   display: grid;
-  grid-template-columns: [card-border-s] 40px [ img-border-s ] 1fr [img-border-e] 40px [card-border-e];
-  grid-template-rows: [card-border-t] 40px [img-border-s] 1fr [img-border-e p-start-t] 200px [p-end-b] 40px [card-border-b];
+  grid-template-columns: [card-border-s] 20px [ img-border-s ] 1fr [img-border-e] 20px [card-border-e];
+  grid-template-rows: [card-border-t] 20px [img-border-s] 1fr [img-border-e p-start-t] 200px [p-end-b] 20px [card-border-b];
 }
 
 .card-qr-image {
-    
   grid-column: img-border-s/img-border-e;
   grid-row: img-border-s/img-border-e;
 }
 
 .card-qr-image img {
-  border-radius: 20px;
+  border-radius: 3%;
+  width: 100%;
 }
 
 .card-description {
+  text-align: center;
   display: block;
   grid-row: p-start-t/p-end-b;
   grid-column: img-border-s/img-border-e;
-  padding: 40px;
-  /* font-family: "Outfit", sans-serif; */
 }
 
-.card-description h3{
-    font-family: "Outfit", sans-serif;
-
+.card-description .card-text-wrapper {
+  display: grid;
 }
 
-.card-description p{
-    color: hsl(220, 15%, 55%);
-    display: table;
+.card-description .card-text-wrapper h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.card-description .card-text-wrapper p {
+  color: hsl(220, 15%, 55%);
+  font-size: 15px;
+  width: 100%;
 }
