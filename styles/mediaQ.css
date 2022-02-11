@@ -1,21 +1,13 @@
 @media screen and (max-width: 600px) {
   body {
     background-color: red;
-    display: grid;
-    grid-template-columns: minmax(10px, 30px) [right-side] 1fr [left-side] minmax(
-        10px,
-        30px
-      );
-    grid-template-rows: minmax(4.7em, 5.5em) [top-space] 1fr [ bottom-space] minmax(
-        1.7em,
-        1.5em
-      );
+    
   }
 
   .card {
     display: grid;
     grid-template-columns: [card-border-s] 20px [ img-border-s ] 1fr [img-border-e] 20px [card-border-e];
-    grid-template-rows: [card-border-t] 20px [img-border-s] 1fr [img-border-e p-start-t] 200px [p-end-b] 20px [card-border-b];
+    grid-template-rows: [card-border-t] 20px [img-border-s] 1fr [img-border-e p-start-t] auto [p-end-b] 20px [card-border-b];
   }
   
 }
