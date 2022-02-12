@@ -1,13 +1,23 @@
-@media screen and (max-width: 600px) {
-  body {
-    background-color: red;
-    
-  }
+@media screen and (max-width: 400px) {
 
   .card {
     display: grid;
     grid-template-columns: [card-border-s] 20px [ img-border-s ] 1fr [img-border-e] 20px [card-border-e];
     grid-template-rows: [card-border-t] 20px [img-border-s] 1fr [img-border-e p-start-t] auto [p-end-b] 20px [card-border-b];
+  }
+
+  .card .card-description .card-text-wrapper{
+
+  }
+
+  .card .card-description .card-text-wrapper h3 {
+    font-size: 17px;
+
+  }
+
+  .card .card-description .card-text-wrapper p {
+    font-size: 15px;
+    font-weight: 700;
   }
   
 }

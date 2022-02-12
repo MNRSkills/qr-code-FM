@@ -31,7 +31,7 @@ body {
   grid-column: right-side/left-side;
   display: grid;
   grid-template-columns: [card-border-s] 20px [ img-border-s ] 1fr [img-border-e] 20px [card-border-e];
-  grid-template-rows: [card-border-t] 20px [img-border-s] 1fr [img-border-e p-start-t] 200px [p-end-b] 20px [card-border-b];
+  grid-template-rows: [card-border-t] 20px [img-border-s] 1fr [img-border-e p-start-t] 240px [p-end-b] 20px [card-border-b];
 }
 
 .card-qr-image {
@@ -52,7 +52,8 @@ body {
 }
 
 .card-description .card-text-wrapper {
-  display: grid;
+  padding: 10px;
+
 }
 
 .card-description .card-text-wrapper h3 {
@@ -64,5 +65,5 @@ body {
 .card-description .card-text-wrapper p {
   color: hsl(220, 15%, 55%);
   font-size: 15px;
-  width: 100%;
+  font-weight: 700;
 }
